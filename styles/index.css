@@ -1,28 +1,38 @@
- :root {
+:root {
       --bs-primary: #6a0dad; /* Violet */
       --bs-primary-rgb: 106, 13, 173;
       --hover-color: #ff5733; /* Bright orange */
     }
 
-    .btn-primary {
-      background-color: var(--bs-primary) !important;
-      border-color: var(--bs-primary) !important;
+    header .btn,
+    footer .btn,
+    .nav-buttons .btn {
+      transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    }
+
+    header .btn-primary,
+    footer .btn-primary,
+    .nav-buttons .btn-primary {
+      background-color: #6a0dad !important;
+      border-color: #6a0dad !important;
       color: #fff !important;
     }
 
-    .btn-primary:hover,
-    .btn-outline-primary:hover {
-      background-color: var(--hover-color) !important;
-      border-color: var(--hover-color) !important;
-      color: #fff !important;
+    header .btn-outline-primary,
+    footer .btn-outline-primary,
+    .nav-buttons .btn-outline-primary {
+      color: #6a0dad !important;
+      border-color: #6a0dad !important;
     }
 
-    .btn-outline-primary {
-      color: var(--bs-primary) !important;
-      border-color: var(--bs-primary) !important;
-    }
-
-    .btn-outline-primary:hover {
+    header .btn-primary:hover,
+    footer .btn-primary:hover,
+    .nav-buttons .btn-primary:hover,
+    header .btn-outline-primary:hover,
+    footer .btn-outline-primary:hover,
+    .nav-buttons .btn-outline-primary:hover {
+      background-color: #ff5733 !important;
+      border-color: #ff5733 !important;
       color: #fff !important;
     }
 
@@ -37,24 +47,17 @@
       transform: scale(1.2);
     }
 
-    header .nav-link,
-    footer .nav-link {
-      color: var(--bs-primary) !important;
-      transition: color 0.3s;
-    }
-
-    header .nav-link:hover,
-    footer .nav-link:hover {
-      color: var(--hover-color) !important;
-    }
-
+    header a.nav-link,
+    footer a.nav-link,
     header .logo,
     footer .logo {
-      color: var(--bs-primary) !important;
+      color: #6a0dad !important;
       transition: color 0.3s;
     }
 
+    header a.nav-link:hover,
+    footer a.nav-link:hover,
     header .logo:hover,
     footer .logo:hover {
-      color: var(--hover-color) !important;
+      color: #ff5733 !important;
     }
