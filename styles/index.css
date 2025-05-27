@@ -1,8 +1,60 @@
-.social-icons a {
-  transition: color 0.3s, transform 0.3s;
-}
+ :root {
+      --bs-primary: #6a0dad; /* Violet */
+      --bs-primary-rgb: 106, 13, 173;
+      --hover-color: #ff5733; /* Bright orange */
+    }
 
-.social-icons a:hover {
-  color: #0d6efd;
-  transform: scale(1.2);
-}
+    .btn-primary {
+      background-color: var(--bs-primary) !important;
+      border-color: var(--bs-primary) !important;
+      color: #fff !important;
+    }
+
+    .btn-primary:hover,
+    .btn-outline-primary:hover {
+      background-color: var(--hover-color) !important;
+      border-color: var(--hover-color) !important;
+      color: #fff !important;
+    }
+
+    .btn-outline-primary {
+      color: var(--bs-primary) !important;
+      border-color: var(--bs-primary) !important;
+    }
+
+    .btn-outline-primary:hover {
+      color: #fff !important;
+    }
+
+    .social-icons a {
+      transition: color 0.3s, transform 0.3s;
+      color: #212529;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: var(--hover-color);
+      transform: scale(1.2);
+    }
+
+    header .nav-link,
+    footer .nav-link {
+      color: var(--bs-primary) !important;
+      transition: color 0.3s;
+    }
+
+    header .nav-link:hover,
+    footer .nav-link:hover {
+      color: var(--hover-color) !important;
+    }
+
+    header .logo,
+    footer .logo {
+      color: var(--bs-primary) !important;
+      transition: color 0.3s;
+    }
+
+    header .logo:hover,
+    footer .logo:hover {
+      color: var(--hover-color) !important;
+    }
