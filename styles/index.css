@@ -1,7 +1,107 @@
-:root {
-      --bs-primary: #6a0dad; /* Violet */
+ :root {
+      --bs-primary: #6a0dad;
       --bs-primary-rgb: 106, 13, 173;
-      --hover-color: #ff5733; /* Bright orange */
+      --hover-color: #ff5733;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .nav-link {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar-toggler {
+  border: none;
+  background: transparent;
+
+}
+
+.navbar-toggler-icon {
+  background-image: none; /* Remove default black square */
+  width: 30px;
+  height: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #6a0dad; /* Violet */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: 0;
+}
+
+.navbar-toggler-icon div {
+  top: 9px;
+}
+
+.navbar-toggler-icon::after {
+  top: 18px;
+}
+
+
+
+    .btn {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-icons i {
+      font-size: 16px;
+    }
+
+    header {
+      padding: 1.5rem 0;
+    }
+
+    footer {
+      padding: 2rem 0;
+      background-color: #f8f9fa;
+    }
+
+    .social-icons a {
+      transition: color 0.3s, transform 0.3s;
+      color: #212529;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: var(--hover-color);
+      transform: scale(1.2);
     }
 
     header .btn,
@@ -36,17 +136,6 @@
       color: #fff !important;
     }
 
-    .social-icons a {
-      transition: color 0.3s, transform 0.3s;
-      color: #212529;
-      text-decoration: none;
-    }
-
-    .social-icons a:hover {
-      color: var(--hover-color);
-      transform: scale(1.2);
-    }
-
     header a.nav-link,
     footer a.nav-link,
     header .logo,
@@ -60,4 +149,32 @@
     header .logo:hover,
     footer .logo:hover {
       color: #ff5733 !important;
+    }
+
+    @media (max-width: 768px) {
+      .nav-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo {
+        font-size: 24px;
+        text-align: center;
+        display: block;
+      }
+
+      .social-icons {
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      footer .container {
+        flex-direction: column;
+        text-align: center;
+      }
     }
